@@ -1,5 +1,7 @@
 package riyad.houda.gestionLocationVehicules.web;
 
+import riyad.houda.gestionLocationVehicules.dtos.LoginRequest;
+import riyad.houda.gestionLocationVehicules.dtos.LoginResponse;
 import riyad.houda.gestionLocationVehicules.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,7 +20,6 @@ public class AuthController {
 
     @PostMapping("/login")
     public LoginResponse login(@RequestBody LoginRequest loginRequest) {
-
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),
@@ -36,17 +37,4 @@ public class AuthController {
 
         return response;
     }
-}
-
-class LoginRequest {
-    private String username;
-    private String password;
-
-}
-
-class LoginResponse {
-    private String accessToken;
-    private String username;
-    private String role;
-
 }

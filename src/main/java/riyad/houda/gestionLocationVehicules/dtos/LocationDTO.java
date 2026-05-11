@@ -3,6 +3,7 @@ package riyad.houda.gestionLocationVehicules.dtos;
 import lombok.Data;
 import java.time.LocalDateTime;
 
+
 @Data
 public class LocationDTO {
     private Long id;

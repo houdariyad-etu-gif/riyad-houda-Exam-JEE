@@ -1,5 +1,6 @@
 package riyad.houda.gestionLocationVehicules.config;
 
+
 import riyad.houda.gestionLocationVehicules.entities.*;
 import riyad.houda.gestionLocationVehicules.enums.FuelType;
 import riyad.houda.gestionLocationVehicules.enums.MotorcycleType;
@@ -58,16 +59,40 @@ public class DataInitializer implements CommandLineRunner {
         agenceRepository.saveAll(Arrays.asList(agence1, agence2));
         System.out.println(" Agences créées");
 
-        // 4. VÉHICULES
-        Voiture car1 = new Voiture(); car1.setMarque("Dacia"); car1.setModele("Logan"); car1.setMatricule("123-A-45"); car1.setPrixParJour(250.0); car1.setDateMiseEnService(LocalDate.of(2022,1,1)); car1.setStatut(VehiculeStatus.DISPONIBLE); car1.setAgence(agence1); car1.setNombrePortes(5); car1.setTypeVoitureburant(FuelType.ESSENCE); car1.setBoiteVitesse(TransmissionType.MANUELLE);
+        // 4. VÉHICULES - LIGNE CORRIGÉE
+        Voiture car1 = new Voiture();
+        car1.setMarque("Dacia");
+        car1.setModele("Logan");
+        car1.setMatricule("123-A-45");
+        car1.setPrixParJour(250.0);
+        car1.setDateMiseEnService(LocalDate.of(2022,1,1));
+        car1.setStatut(VehiculeStatus.DISPONIBLE);
+        car1.setAgence(agence1);
+        car1.setNombrePortes(5);
+        car1.setTypeCarburant(FuelType.ESSENCE);
+        car1.setBoiteVitesse(TransmissionType.MANUELLE);
 
-        Motorcycle moto1 = new Motorcycle(); moto1.setMarque("Yamaha"); moto1.setModele("MT-07"); moto1.setMatricule("678-B-90"); moto1.setPrixParJour(400.0); moto1.setDateMiseEnService(LocalDate.of(2023,6,15)); moto1.setStatut(VehiculeStatus.DISPONIBLE); moto1.setAgence(agence2); moto1.setCylindree(689.0); moto1.setTypeMoto(MotorcycleType.ROADSTER); moto1.setCasqueInclus(true);
+        Motorcycle moto1 = new Motorcycle();
+        moto1.setMarque("Yamaha");
+        moto1.setModele("MT-07");
+        moto1.setMatricule("678-B-90");
+        moto1.setPrixParJour(400.0);
+        moto1.setDateMiseEnService(LocalDate.of(2023,6,15));
+        moto1.setStatut(VehiculeStatus.DISPONIBLE);
+        moto1.setAgence(agence2);
+        moto1.setCylindree(689.0);
+        moto1.setTypeMoto(MotorcycleType.ROADSTER);
+        moto1.setCasqueInclus(true);
 
         vehiculeRepository.saveAll(Arrays.asList(car1, moto1));
         System.out.println(" Véhicules créés");
 
         // 5. LOCATIONS
-        Location loc1 = new Location(); loc1.setDateDebut(LocalDateTime.now().minusDays(5)); loc1.setDateFin(LocalDateTime.now().minusDays(2)); loc1.setPrixTotal(750.0); loc1.setVehicule(car1);
+        Location loc1 = new Location();
+        loc1.setDateDebut(LocalDateTime.now().minusDays(5));
+        loc1.setDateFin(LocalDateTime.now().minusDays(2));
+        loc1.setPrixTotal(750.0);
+        loc1.setVehicule(car1);
         locationRepository.save(loc1);
         System.out.println(" Location créée");
 

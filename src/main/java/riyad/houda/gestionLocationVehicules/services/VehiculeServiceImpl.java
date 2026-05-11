@@ -4,7 +4,7 @@ import riyad.houda.gestionLocationVehicules.dtos.VehiculeDTO;
 import riyad.houda.gestionLocationVehicules.entities.Vehicule;
 import riyad.houda.gestionLocationVehicules.enums.VehiculeStatus;
 import riyad.houda.gestionLocationVehicules.mappers.VehiculeMapper;
-import riyad.houda.gestionLocationVehicules.repositories.VehicleRepository;
+import riyad.houda.gestionLocationVehicules.repositories.VehiculeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Transactional
 public class VehiculeServiceImpl implements VehiculeService {
 
-    private final VehicleRepository vehiculeRepository;
+    private final VehiculeRepository vehiculeRepository;
     private final VehiculeMapper vehiculeMapper;
 
     @Override

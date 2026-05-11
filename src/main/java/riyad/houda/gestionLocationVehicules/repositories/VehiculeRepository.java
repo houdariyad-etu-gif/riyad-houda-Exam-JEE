@@ -7,7 +7,7 @@ import riyad.houda.gestionLocationVehicules.enums.VehiculeStatus;
 
 import java.util.List;
 
-public interface VehicleRepository extends JpaRepository<Vehicule, Long> {
+public interface VehiculeRepository extends JpaRepository<Vehicule, Long> {
 
     List<Vehicule> findByStatut(VehiculeStatus statut);
 

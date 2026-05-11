@@ -35,17 +35,17 @@ public class VehiculeMapper {
         return null;
     }
 
-    private void mapCommonFields(Vehicule vehicle, VehiculeDTO dto) {
-        dto.setId(vehicle.getId());
-        dto.setMarque(vehicle.getMarque());
-        dto.setModele(vehicle.getModele());
-        dto.setMatricule(vehicle.getMatricule());
-        dto.setPrixParJour(vehicle.getPrixParJour());
-        dto.setDateMiseEnService(vehicle.getDateMiseEnService());
-        dto.setStatut(vehicle.getStatut());
-        if (vehicle.getAgence() != null) {
-            dto.setAgenceId(vehicle.getAgence().getId());
-            dto.setAgenceNom(vehicle.getAgence().getNom());
+    private void mapCommonFields(Vehicule vehicule, VehiculeDTO dto) {
+        dto.setId(vehicule.getId());
+        dto.setMarque(vehicule.getMarque());
+        dto.setModele(vehicule.getModele());
+        dto.setMatricule(vehicule.getMatricule());
+        dto.setPrixParJour(vehicule.getPrixParJour());
+        dto.setDateMiseEnService(vehicule.getDateMiseEnService());
+        dto.setStatut(vehicule.getStatut());
+        if (vehicule.getAgence() != null) {
+            dto.setAgenceId(vehicule.getAgence().getId());
+            dto.setAgenceNom(vehicule.getAgence().getNom());
         }
     }
 

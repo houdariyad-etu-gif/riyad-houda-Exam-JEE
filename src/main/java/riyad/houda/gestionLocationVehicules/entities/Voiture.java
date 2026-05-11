@@ -11,7 +11,7 @@ import riyad.houda.gestionLocationVehicules.enums.TransmissionType;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Voiture extends Vehicle {
+public class Voiture extends Vehicule {
 
     private Integer nombrePortes;
 

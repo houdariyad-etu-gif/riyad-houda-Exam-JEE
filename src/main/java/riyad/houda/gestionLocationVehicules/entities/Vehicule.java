@@ -3,7 +3,8 @@ package riyad.houda.gestionLocationVehicules.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import riyad.houda.gestionLocationVehicules.enums.VehicleStatus;
+import riyad.houda.gestionLocationVehicules.enums.VehiculeStatus;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class Vehicle {
+public abstract class Vehicule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +29,7 @@ public abstract class Vehicle {
     private LocalDate dateMiseEnService;
 
     @Enumerated(EnumType.STRING)
-    private VehicleStatus statut;
+    private VehiculeStatus statut;
 
     @ManyToOne
     @JoinColumn(name = "agence_id")

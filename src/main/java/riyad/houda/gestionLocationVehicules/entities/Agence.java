@@ -21,5 +21,5 @@ public class Agence {
     private String telephone;
 
     @OneToMany(mappedBy = "agence", cascade = CascadeType.ALL)
-    private List<Vehicle> vehicules = new ArrayList<>();
+    private List<Vehicule> vehicules = new ArrayList<>();
 }

@@ -21,5 +21,5 @@ public class Location {
 
     @ManyToOne
     @JoinColumn(name = "vehicule_id")
-    private Vehicle vehicule;
+    private Vehicule vehicule;
 }

@@ -10,7 +10,7 @@ import riyad.houda.gestionLocationVehicules.enums.MotorcycleType;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Motorcycle extends Vehicle {
+public class Motorcycle extends Vehicule {
 
     private Double cylindree;
 
